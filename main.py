@@ -116,10 +116,10 @@ class Form(QtWidgets.QMainWindow, ui):
   
    def calc(self,img):
        #각 이미지별 디스플레이에 표시하기 위해 리사이즈되는 크기
-       #labelsize = (781,561)  #original
-       #labelsize = (781,439)  #16:9 MBP 1080p webcam
-       labelsize = (748,561)  #4:3 ZFold3 120mp rearside cam
-       #labelsize = (747,561)  #raspberry pi V2 cam
+       #labelsize = (781,561)  # 원본
+       #labelsize = (781,439)  # 16:9 이미지
+       labelsize = (748,561)  # 4:3 이미지
+       #labelsize = (747,561)  # 라즈베리파이 V2 카메라
        self.output = ''
  
       
@@ -143,10 +143,10 @@ class Form(QtWidgets.QMainWindow, ui):
            #if len(circles[0]) > 2:
            #    img = cv.putText(img,'Too many circles detected.',textOrg,cv.FONT_HERSHEY_SIMPLEX,fontSize,(0,255,0),4)
            #원이 3개 이상 검출되면 이미지상 오류로 판별하려 했으나 해당 기능을 삭제함.
- 
-           #1 or 2개 검출
+           # 해당 기능을 복구하고자 한다면, # 기호를 빼 주석처리를 취소하고 아래의 if False: pass 를 삭제하면 된다. 
            if False:
                pass
+           #1 or 2개 검출
            else:
                #사각형 범위 구하기
                rects = []
